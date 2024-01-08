@@ -75,12 +75,7 @@ router.get("/allgroups", fetchUser, async (req,res)=>{
 // ROUTE-3 update group details like title, description or currency
 router.put("/updategroup/:id", fetchUser, async(req,res)=>{
     try{
-        const {title,description,currency} = req.body;
-
-        let groupData = {};
-        if(title){groupData.title=title}
-        if(description){groupData.description= description}
-        if(currency){groupData.currency = currency}
+        const {title,description,currency,members} = req.body;
 
         //find the group with given group id
         let group = await Group.findById(req.params.id);
@@ -90,6 +85,19 @@ router.put("/updategroup/:id", fetchUser, async(req,res)=>{
         if(!group.members.includes(req.user.id)){
             return res.status(401).send("Not allowed to update");
         }
+
+        let groupData = {};
+        if(title){groupData.title=title}
+        if(description){groupData.description= description}
+        if(currency){groupData.currency = currency}
+        if(members){
+            groupData.members = await Promise.all( 
+            _.map(members,(value)=>{
+            return User.findOne({ "email": value }).select("_id");
+            })
+                );
+        }
+
 
         group = await Group.findByIdAndUpdate(req.params.id, {$set : groupData}, {new:true});
 
@@ -101,6 +109,12 @@ router.put("/updategroup/:id", fetchUser, async(req,res)=>{
     }
 });
 
+
+
+
+// 4. leave group
+// 5. delete group
+//Leave and Delete groups is only possible if the expenses of the group is not settled
 
 
 module.exports = router

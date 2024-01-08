@@ -1,6 +1,16 @@
 const mongoose = require("mongoose")
 const {Schema} = mongoose
 
+const ParticipantSchema = new Schema({
+    user:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'user'
+    },
+    amountOwed:{
+        type: Number,
+    }
+});
+
 const ExpenseSchema = new Schema({
     description:{
         type: String,
@@ -19,13 +29,7 @@ const ExpenseSchema = new Schema({
         ref: 'group'
     },
     participants:{
-        user:{
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'user'
-        },
-        amountOwed:{
-            type: Number,
-        }
+        type: [ParticipantSchema],
     },
     date:{
         type: Date,
