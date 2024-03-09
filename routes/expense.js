@@ -51,8 +51,44 @@ async(req,res)=>{
     }
 });
 
-router.get()
+// ROUTE-2 Show All expenses of the group
+router.get("/showExp/:id",fetchUser, async(req,res)=>{
+    try{
+        let groupId = req.params.id;
 
+        const groupExpenses = Expense.find({groupId});
+
+        if(!group){return res.status(404).send("Group not found")}
+
+        var totalAmount = 0;
+        
+        for(var expense of groupExpenses){
+            totalAmount += expense['amount'];
+        }
+
+        res.status(200).json({
+            status: "Success",
+            expenses: groupExpenses,
+            total: totalAmount
+        })
+
+    }catch(error){
+        console.log(error.message);
+        return res.status(500).send("Some Internal error occured");
+    }
+});
+
+// // ROUTE-3 show balances of the users in the group
+// router.get("showUserExp",fetchUser, async(req,res)=>{
+//     try{
+//         let userId = req.user.id;
+
+//         let expenses = await Expense.find({participants["user"]:userId});
+//     }catch(error){
+//         console.log(error.message);
+//         return res.status(500).send("Some internal error occured");
+//     }
+// });
 
 
 module.exports = router

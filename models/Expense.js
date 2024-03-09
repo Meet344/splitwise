@@ -24,7 +24,7 @@ const ExpenseSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'user'
     },
-    group:{
+    groupId:{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'group'
     },

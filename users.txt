@@ -1,0 +1,59 @@
+{
+  "name": "vatsal",
+  "email": "vatsal123@gmail.com",
+  "phone": "1234",
+  "password": "12345"
+}
+{
+  "success": true,
+  "authtoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlYzhkNGM5ZjZhNjZmNTA0YTQ0MGRiIn0sImlhdCI6MTcxMDAwMTQ4NH0.SGUDeSvcTdImGnkRm3jJWTvNa5zAbZKvrc8M3INMAUE"
+}
+
+{
+  "name": "test1",
+  "email": "test1@gmail.com",
+  "phone": "1234",
+  "password": "12345"
+}
+{
+  "success": true,
+  "authtoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlYzhkOWY5ZjZhNjZmNTA0YTQ0MGRlIn0sImlhdCI6MTcxMDAwMTU2N30.HMg5ZMolniDYC9YG9sf8Xnsw5bUUhqUriI3ajpEnM4U"
+}
+
+{
+  "name": "test2",
+  "email": "test2@gmail.com",
+  "phone": "1234",
+  "password": "12345"
+}
+{
+  "success": true,
+  "authtoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlYzhkOWY5ZjZhNjZmNTA0YTQ0MGRlIn0sImlhdCI6MTcxMDAwMTU2N30.HMg5ZMolniDYC9YG9sf8Xnsw5bUUhqUriI3ajpEnM4U"
+}
+
+
+{
+  "name": "test3",
+  "email": "test3@gmail.com",
+  "phone": "1234",
+  "password": "12345"
+}{
+  "success": true,
+  "authtoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlYzhkZmM5ZjZhNjZmNTA0YTQ0MGUxIn0sImlhdCI6MTcxMDAwMTY2MH0.j204YgfH8f0jbndplNx6Rbc2wPQW-EuuOelECgdd4H8"
+}
+
+
+{
+  "name": "test4",
+  "email": "test4@gmail.com",
+  "phone": "1234",
+  "password": "12345"
+}
+{
+  "success": true,
+  "authtoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlYzhmNzI5ZjZhNjZmNTA0YTQ0MGU0In0sImlhdCI6MTcxMDAwMjAzNH0.9uP7aa6zNP885Ao0RzaMajTnOl4fOJBy5xQi2YwR3Do"
+}
+
+
+<-------------------------------------------GROUPS------------------------------------------------------------->
+
