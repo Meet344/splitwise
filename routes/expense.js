@@ -39,7 +39,7 @@ async(req,res)=>{
         const expense = new Expense({
             description,
             amount,
-            group: groupId,
+            groupId,
             participants,
         });
 
@@ -56,9 +56,9 @@ router.get("/showExp/:id",fetchUser, async(req,res)=>{
     try{
         let groupId = req.params.id;
 
-        const groupExpenses = Expense.find({groupId});
+        const groupExpenses = await Expense.find({groupId});
 
-        if(!group){return res.status(404).send("Group not found")}
+        if(!groupExpenses){return res.status(404).send("Group not found")}
 
         var totalAmount = 0;
         
@@ -71,6 +71,7 @@ router.get("/showExp/:id",fetchUser, async(req,res)=>{
             expenses: groupExpenses,
             total: totalAmount
         })
+        // res.json(groupExpenses);
 
     }catch(error){
         console.log(error.message);
@@ -78,17 +79,17 @@ router.get("/showExp/:id",fetchUser, async(req,res)=>{
     }
 });
 
-// // ROUTE-3 show balances of the users in the group
-// router.get("showUserExp",fetchUser, async(req,res)=>{
-//     try{
-//         let userId = req.user.id;
-
-//         let expenses = await Expense.find({participants["user"]:userId});
-//     }catch(error){
-//         console.log(error.message);
-//         return res.status(500).send("Some internal error occured");
-//     }
-// });
+// ROUTE-3 show balances of the users in the group
+router.get("showUserExp",fetchUser, async(req,res)=>{
+    try{
+        let userId = req.user.id;
+        const {groupId} = req.body;
+        let expenses = await Expense.find({groupId});
+    }catch(error){
+        console.log(error.message);
+        return res.status(500).send("Some internal error occured");
+    }
+});
 
 
 module.exports = router

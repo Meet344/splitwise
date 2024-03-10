@@ -1,23 +1,11 @@
 {
-  "name": "vatsal",
-  "email": "vatsal123@gmail.com",
-  "phone": "1234",
-  "password": "12345"
-}
-{
-  "success": true,
-  "authtoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlYzhkNGM5ZjZhNjZmNTA0YTQ0MGRiIn0sImlhdCI6MTcxMDAwMTQ4NH0.SGUDeSvcTdImGnkRm3jJWTvNa5zAbZKvrc8M3INMAUE"
-}
-
-{
   "name": "test1",
   "email": "test1@gmail.com",
   "phone": "1234",
   "password": "12345"
-}
-{
+}{
   "success": true,
-  "authtoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlYzhkOWY5ZjZhNjZmNTA0YTQ0MGRlIn0sImlhdCI6MTcxMDAwMTU2N30.HMg5ZMolniDYC9YG9sf8Xnsw5bUUhqUriI3ajpEnM4U"
+  "authtoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlZGI2OTFkOWQ0NGExN2M0OTFjYjZlIn0sImlhdCI6MTcxMDA3NzU4NX0.xU1maoGnMzzykEQw71Kiv0I74Qg8Kjpe1EkfhYa7n44"
 }
 
 {
@@ -25,10 +13,9 @@
   "email": "test2@gmail.com",
   "phone": "1234",
   "password": "12345"
-}
-{
+}{
   "success": true,
-  "authtoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlYzhkOWY5ZjZhNjZmNTA0YTQ0MGRlIn0sImlhdCI6MTcxMDAwMTU2N30.HMg5ZMolniDYC9YG9sf8Xnsw5bUUhqUriI3ajpEnM4U"
+  "authtoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlZGI2N2RkOWQ0NGExN2M0OTFjYjZiIn0sImlhdCI6MTcxMDA3NzU2NX0.FhXt4oDfiEU9uShMyGwoWd86dj-yt4UV4yKhgTwPwjg"
 }
 
 
@@ -39,7 +26,7 @@
   "password": "12345"
 }{
   "success": true,
-  "authtoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlYzhkZmM5ZjZhNjZmNTA0YTQ0MGUxIn0sImlhdCI6MTcxMDAwMTY2MH0.j204YgfH8f0jbndplNx6Rbc2wPQW-EuuOelECgdd4H8"
+  "authtoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlZGI2NmFkOWQ0NGExN2M0OTFjYjY4In0sImlhdCI6MTcxMDA3NzU0Nn0.5qm0WgrbnFqhQM7oJJ1edD44sdFj4tQAmByAsyBdXag"
 }
 
 
@@ -51,9 +38,78 @@
 }
 {
   "success": true,
-  "authtoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlYzhmNzI5ZjZhNjZmNTA0YTQ0MGU0In0sImlhdCI6MTcxMDAwMjAzNH0.9uP7aa6zNP885Ao0RzaMajTnOl4fOJBy5xQi2YwR3Do"
+  "authtoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlZGI2NDhkOWQ0NGExN2M0OTFjYjY1In0sImlhdCI6MTcxMDA3NzUxMn0.mHb9YcXqdYn8ddT85c_nlEPZ1ndWFmuCIMF6IdGf0Lk"
 }
 
-
+{
+  "name": "test5",
+  "email": "test5@gmail.com",
+  "phone": "1234",
+  "password": "12345"
+}
+{
+  "success": true,
+  "authtoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlZGI3ZGVkOWQ0NGExN2M0OTFjYjgzIn0sImlhdCI6MTcxMDA3NzkxOH0.Zc38IhT72v36hNpKVjlMJKJCtkpDB3H3joFTHzol7kw"
+}
 <-------------------------------------------GROUPS------------------------------------------------------------->
 
+GROUP 1
+owner test1
+memebers test2 test3
+id: 65edb750d9d44a17c491cb78
+
+
+GROUP 2
+owner test1
+memebers test2 test4
+id: 65edb7aad9d44a17c491cb7c
+
+
+GROUP 3
+owner test2
+memebers test3
+id: 65edb823d9d44a17c491cb86
+
+
+GROUP 4
+owner test3
+memebers test1 test4
+id: 65edb8a3d9d44a17c491cb8a
+
+<--------------------------------------------------EXPENSE---------------------------------------------->
+
+ex5
+group 2 test1
+1,2,4
+65eddaee0088856f7d3f2372
+
+
+ex2
+group2 test 1
+test4 test1
+65eddb3b0088856f7d3f2378
+
+ex3
+group2 test1
+test4
+65eddce70088856f7d3f2381
+
+ex4
+group3 test3
+test 2 test3
+65ede5dd0088856f7d3f2385
+
+ex5
+group1 test3
+test1 test2
+65ede6770088856f7d3f238c
+
+ex6
+group1 test3
+test2 test3
+65ede6e40088856f7d3f2396
+
+ex7
+group1 test3
+test2 test3
+65ede6e40088856f7d3f2396
