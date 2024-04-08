@@ -58,7 +58,7 @@ router.post("/creategroup", fetchUser,
     }
 });
 
-//ROUTE-2 Show all groups (Auth required)
+//ROUTE-2 Show all groups that the user is Part of (Auth required) 
 router.get("/allgroups", fetchUser, async (req,res)=>{
     try{
         const userId = req.user.id;
@@ -72,7 +72,22 @@ router.get("/allgroups", fetchUser, async (req,res)=>{
     }
 });
 
-// ROUTE-3 update group details like title, description or currency
+// ROUTE-3 get group details by getting id (AUTH required)
+router.get("/getgroup/:id", fetchUser, async(req,res)=>{
+    try{
+        const userId = req.user.id;
+        const groupId = req.params.id;
+        const group = await Group.findById(groupId);
+        if(!group.members.includes(userId)){
+            return res.status(401).json({"error": "You are not a part of this group."});
+        }
+        res.json(group);
+    }catch(error){
+        console.log(error.message);
+        return res.status(500).send("Some internal error occured.");
+    }
+})
+// ROUTE-4 update group details like title, description or currency
 router.put("/updategroup/:id", fetchUser, async(req,res)=>{
     try{
         const {title,description,currency,members} = req.body;
